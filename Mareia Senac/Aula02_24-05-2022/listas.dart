@@ -3,7 +3,7 @@ void main() {
   //Listas são estruturas que armazenam mais de um cvalor a uma variável
 
   //Criando uma lista
-  var compras = ['Macarrão', 'Feijão', 'Pão', 'Manteiga']
+  var compras = ['Macarrão', 'Feijão', 'Pão', 'Manteiga'];
 
   //Exibindo uma lista
   print('Listas de compras: $compras');
@@ -35,5 +35,15 @@ void main() {
   /**
    * first(): Retorna o primeiro elemento da lista
    * last(): Retorna o último elemto da lista
+   * isEmpty(): Retorna true se a lista está vazia, caso contrário, false
+   * length(): Retorna o tamanho da lista
    */
+
+  var listaNomes = ['José Maria', 'Pedro da Silva', 'Cristina Pereira'];
+
+  print('Primeiro nome: ${listaNomes.first}');
+  print('Último nome: ${listaNomes.last}');
+  print('A lista está vazia? ${listaNomes.isEmpty}');
+  print('Tamnho da lista: ${listaNomes.length}');
+  print('=' * 50);
 }
