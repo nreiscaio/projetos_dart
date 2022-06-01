@@ -1,0 +1,29 @@
+CRIANDO UM BANCO DE DADOS
+
+CREATE DATABASE aluno
+DEFAULT CHARACTER SET utf8
+DEFAULT COLLATE utf8_general_ci;
+
+
+CRIANDO TABELA
+
+CREATE TABLE aluno (
+    id INT NOT NULL AUTO_INCREMENT,
+    matricula INT(4),
+    nome VARCHAR(50) NOT NULL,
+    data_nascimento DATE,
+    turma CHAR(1) NOT NULL,
+    turno CHAR(6) NOT NULL,
+    altura DECIMAL(3, 2),
+    monitor ENUM('S', 'N'),
+    cidade VARCHAR(45) DEFAULT 'Juiz de Fora',
+    PRIMARY KEY(id)
+) DEFAULT CHARSET = utf8;
+
+INSERINDO VALORES
+INSERT INTO aluno (matricula, nome, data_nascimento, turma, turno, altura, monitor, cidade)
+VALUES (1001, 'José da Silva Caetano', '1970-05-10', 'A', 'Noite', 1.77, 'N', 'Juiz de Fora'),
+(1002, 'Josué da Silva Cetano', '1980-05-10', 'A', 'Noite', 1.60, 'N', 'Juiz de Fora'),
+(1002, 'Silva da Silva Cetano', '1980-05-10', 'A', 'Noite', 1.78, 'S', 'Barbacena'),
+(1002, 'Josué da Silva Cetano', '1980-05-10', 'A', 'Noite', 1.60, 'N', 'Juiz de Fora'),
+(1002, 'Caetano da Silva Cetano', '1980-05-10', 'A', 'Noite', 1.76, 'S', 'Barnacena');
