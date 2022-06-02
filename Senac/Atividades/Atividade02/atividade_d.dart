@@ -1,3 +1,5 @@
+import 'dart:io';
+
 void main() {
   double nota1 = 20;
   double nota2 = 30;

@@ -1,9 +1,8 @@
-void main() {
-  String funcao = aloMundo();
-  print(funcao);
-}
+import 'dart:io';
 
-String aloMundo() {
-  String opa = ('Alo mundo!');
-  return opa;
+void main() {
+  stdout.write('Entre com "Ola Mundo": ');
+  String? nome = stdin.readLineSync();
+
+  print(nome);
 }

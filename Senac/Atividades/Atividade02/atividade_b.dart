@@ -1,8 +1,6 @@
-void main () {
-  double a = funcao2(10);
-  print('O número informado foi $a');
-}
+import 'dart:io';
 
-double funcao2(a) {
-  return a;
+void main () {
+  int a = 10;
+  print('O número informado foi $a');
 }
