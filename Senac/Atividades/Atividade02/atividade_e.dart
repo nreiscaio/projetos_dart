@@ -1,7 +1,8 @@
 import 'dart:io';
 
 void main() {
-  double metro = 100;
+  stdout.write('Entre com a distância em metros: ');
+  double metro = double.parse(stdin.readLineSync()!);
   double conversao = metro * 100;
   print('$metro metros em centímetros são $conversao');
 }

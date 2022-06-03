@@ -1,6 +1,7 @@
 import 'dart:io';
 
 void main () {
-  int a = 10;
+  stdout.write('Insira um valor: ');
+  double a = double.parse(stdin.readLineSync()!);
   print('O número informado foi $a');
 }

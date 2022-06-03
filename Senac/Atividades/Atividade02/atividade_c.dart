@@ -1,8 +1,11 @@
 import 'dart:io';
 
 void main() {
-  int a = 10;
-  int b = 20;
-  int soma = a + b;
+  print('Programa que realiza soma');
+  stdout.write('Entre com o primeiro valor: ');
+  double a = double.parse(stdin.readLineSync()!);
+  stdout.write('Entre com o segundo valor: ');
+  double b = double.parse(stdin.readLineSync()!);
+  double soma = a + b;
   print('$soma');
 }
