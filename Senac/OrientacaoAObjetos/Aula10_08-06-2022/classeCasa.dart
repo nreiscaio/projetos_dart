@@ -47,4 +47,20 @@ void main() {
   //A vantagem utilizar classes é que podemos ter várias instâncias
   //dessa mesma classe
   //então agora posso criar a casa da Jane também, aí ninguém briga :)
+  print('-' * 50);
+  //Criando a instancia da casa da Jane
+  Casa casaDaJane = new Casa();
+
+  casaDaJane.cor = 'Verde';
+  casaDaJane.quantidadeJanelas = 10;
+  casaDaJane.numero = 2000;
+
+  //Saída para os dados da casaDaJane
+  casaDaJane.abrirJanela('Frente!');
+  print('A casa da Jane é: ${casaDaJane.cor}');
+  print('A casa do Jane tem: ${casaDaJane.quantidadeJanelas} janelas!');
+  print('O número da casa da Jane é: ${casaDaJane.numero}');
+
+  //Acessando o método fecharJanela()
+  casaDaJane.fecharJanela('Fundos!');
 }

@@ -1,11 +1,9 @@
-import 'dart:io';
-
 void main() {
-  print('Programa que realiza soma');
-  stdout.write('Entre com o primeiro valor: ');
-  double a = double.parse(stdin.readLineSync()!);
-  stdout.write('Entre com o segundo valor: ');
-  double b = double.parse(stdin.readLineSync()!);
-  double soma = a + b;
-  print('$soma');
+  List a = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+
+  List pares = funcaoPares(a);
+}
+
+List funcaoPares(a) {
+  return [];
 }
