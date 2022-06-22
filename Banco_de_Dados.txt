@@ -71,3 +71,9 @@ EUA
 7.2
 
 
+INSERT INTO aluno (titulo_original, titulo_em_portugues, genero, diretor, roteirista, produtora, ator, atriz, lancamento, pais, nota)
+VALUES ('The Fast and the Furious: Tokyo Drift', 'Velozes & Furiosos: Desafio em Tóquio', 'Ação', 'Justin Lin', 'Chris Morgan', 'Universal', 'Lucas Black', 'Amber Stevens West', '2006/08/11', 'EUA', 6.0),
+(''),
+(1002, 'Silva da Silva Cetano', '1980-05-10', 'A', 'Noite', 1.78, 'S', 'Barbacena'),
+(1002, 'Josué da Silva Cetano', '1980-05-10', 'A', 'Noite', 1.60, 'N', 'Juiz de Fora'),
+(1002, 'Caetano da Silva Cetano', '1980-05-10', 'A', 'Noite', 1.76, 'S', 'Barnacena');
