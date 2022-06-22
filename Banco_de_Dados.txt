@@ -27,3 +27,47 @@ VALUES (1001, 'José da Silva Caetano', '1970-05-10', 'A', 'Noite', 1.77, 'N', '
 (1002, 'Silva da Silva Cetano', '1980-05-10', 'A', 'Noite', 1.78, 'S', 'Barbacena'),
 (1002, 'Josué da Silva Cetano', '1980-05-10', 'A', 'Noite', 1.60, 'N', 'Juiz de Fora'),
 (1002, 'Caetano da Silva Cetano', '1980-05-10', 'A', 'Noite', 1.76, 'S', 'Barnacena');
+
+
+CREATE TABLE filme (
+    id INT NOT NULL AUTO_INCREMENT,
+    titulo_original VARCHAR(250) NOT NULL,
+    titulo_em_portugues VARCHAR(250) NOT NULL,
+    genero VARCHAR(25) NOT NULL,
+    diretor VARCHAR(25) NOT NULL,
+    roteirista VARCHAR(25) NOT NULL,
+    produtora VARCHAR(50) NOT NULL,
+    ator VARCHAR(25) NOT NULL,
+    atriz VARCHAR(25) NOT NULL,
+    lancamento DATE,
+    pais VARCHAR(25) DEFAULT 'EUA',
+    nota DECIMAL(3,2) NOT NULL,
+    PRIMARY KEY(id)
+) DEFAULT CHARSET = utf8;
+
+The Fast and the Furious: Tokyo Drift
+Velozes & Furiosos: Desafio em Tóquio
+Ação
+Justin Lin
+Chris Morgan
+Universal
+Lucas Black
+Amber Stevens West
+11/08/2006
+EUA
+6.0
+
+
+Cars 
+Carros
+Animação
+John Lasseter
+Joe Ranft
+Pixar
+Owen Wilson
+Jenifer Lewis
+2006/04/14
+EUA
+7.2
+
+

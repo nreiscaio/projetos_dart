@@ -27,4 +27,14 @@ class Data {
 void main() {
   //Criando uma data (3 instâncias)
   Data data = new Data(3, 'Janeiro', 1970);
+  Data dataPedido = new Data(20, 'Março', 2015);
+  Data dataSaida = new Data(29, 'Dezembro', 2020);
+
+  //Atribuições
+  String data1 = data.exibirData();
+  String data2 = dataPedido.exibirData();
+  String data3 = dataSaida.exibirData();
+
+  print('Data atual: $data1 :: Data da realização do pedido: $data2');
+  print('Data de saída do pedido: $data3');
 }
