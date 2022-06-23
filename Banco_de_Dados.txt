@@ -57,7 +57,6 @@ Amber Stevens West
 EUA
 6.0
 
-
 Cars 
 Carros
 Animação
@@ -70,10 +69,46 @@ Jenifer Lewis
 EUA
 7.2
 
+Tropa de Elite
+Tropa de Elite
+Ação
+José Padilha
+André Batista
+Zazen Produções
+Wagner Moura
+Fernanda Machado
+2007/11/05
+Brasil
+8.0
 
-INSERT INTO aluno (titulo_original, titulo_em_portugues, genero, diretor, roteirista, produtora, ator, atriz, lancamento, pais, nota)
+Avengers: Endgame
+Vingadores: Ultimato
+Ação
+Anthony Russo
+Christopher Markus
+Marvel
+Robert Downey
+Scarlett Johanson
+2019/04/25
+EUA
+8.4
+
+Cidade de Deus
+Cidade de Deus
+Ação
+Fernando Meirelles
+Paulo Lins
+02 Filmes
+Alexandre Rodrigues
+Alice Braga
+2002/08/30
+Brasil
+8.6
+
+
+INSERT INTO filme (titulo_original, titulo_em_portugues, genero, diretor, roteirista, produtora, ator, atriz, lancamento, pais, nota)
 VALUES ('The Fast and the Furious: Tokyo Drift', 'Velozes & Furiosos: Desafio em Tóquio', 'Ação', 'Justin Lin', 'Chris Morgan', 'Universal', 'Lucas Black', 'Amber Stevens West', '2006/08/11', 'EUA', 6.0),
-(''),
-(1002, 'Silva da Silva Cetano', '1980-05-10', 'A', 'Noite', 1.78, 'S', 'Barbacena'),
-(1002, 'Josué da Silva Cetano', '1980-05-10', 'A', 'Noite', 1.60, 'N', 'Juiz de Fora'),
-(1002, 'Caetano da Silva Cetano', '1980-05-10', 'A', 'Noite', 1.76, 'S', 'Barnacena');
+('Cars', 'Carros', 'Animação', 'John Lasseter', 'Joe Ranft', 'Pixar', 'Owen Wilson', 'Jenifer Lewis', '2006/04/14', 'EUA', 7.2),
+('Tropa de Elite', 'Tropa de Elite', 'Ação', 'José Padilha', 'André Batista', 'Zazen Produções', 'Wagner Moura', 'Fernanda Machado', '2007/11/05', 'Brasil', 8.0),
+('Avengers: Endgame', 'Vingadores: Ultimato', 'Ação', 'Anthony Russo', 'Christopher Markus', 'Marvel', 'Robert Downey', 'Scarlett Johanson', '2019/04/25', 'EUA', 8.4),
+('Cidade de Deus', 'Cidade de Deus', 'Ação', 'Fernanda Meirelles', 'Paulo Lins', '02 Filmes', 'Alexandre Rodrigues', 'Alice Braga', '2002/08/30', 'Brasil', 8.6);
