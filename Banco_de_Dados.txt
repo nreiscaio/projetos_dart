@@ -29,6 +29,8 @@ VALUES (1001, 'José da Silva Caetano', '1970-05-10', 'A', 'Noite', 1.77, 'N', '
 (1002, 'Caetano da Silva Cetano', '1980-05-10', 'A', 'Noite', 1.76, 'S', 'Barnacena');
 
 
+ATIVIDADE 02 - FILMES
+
 CREATE TABLE filme (
     id INT NOT NULL AUTO_INCREMENT,
     titulo_original VARCHAR(250) NOT NULL,
@@ -112,3 +114,5 @@ VALUES ('The Fast and the Furious: Tokyo Drift', 'Velozes & Furiosos: Desafio em
 ('Tropa de Elite', 'Tropa de Elite', 'Ação', 'José Padilha', 'André Batista', 'Zazen Produções', 'Wagner Moura', 'Fernanda Machado', '2007/11/05', 'Brasil', 8.0),
 ('Avengers: Endgame', 'Vingadores: Ultimato', 'Ação', 'Anthony Russo', 'Christopher Markus', 'Marvel', 'Robert Downey', 'Scarlett Johanson', '2019/04/25', 'EUA', 8.4),
 ('Cidade de Deus', 'Cidade de Deus', 'Ação', 'Fernanda Meirelles', 'Paulo Lins', '02 Filmes', 'Alexandre Rodrigues', 'Alice Braga', '2002/08/30', 'Brasil', 8.6);
+
+FIM!
