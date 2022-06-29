@@ -47,67 +47,6 @@ CREATE TABLE filme (
     PRIMARY KEY(id)
 ) DEFAULT CHARSET = utf8;
 
-The Fast and the Furious: Tokyo Drift
-Velozes & Furiosos: Desafio em Tóquio
-Ação
-Justin Lin
-Chris Morgan
-Universal
-Lucas Black
-Amber Stevens West
-11/08/2006
-EUA
-6.0
-
-Cars 
-Carros
-Animação
-John Lasseter
-Joe Ranft
-Pixar
-Owen Wilson
-Jenifer Lewis
-2006/04/14
-EUA
-7.2
-
-Tropa de Elite
-Tropa de Elite
-Ação
-José Padilha
-André Batista
-Zazen Produções
-Wagner Moura
-Fernanda Machado
-2007/11/05
-Brasil
-8.0
-
-Avengers: Endgame
-Vingadores: Ultimato
-Ação
-Anthony Russo
-Christopher Markus
-Marvel
-Robert Downey
-Scarlett Johanson
-2019/04/25
-EUA
-8.4
-
-Cidade de Deus
-Cidade de Deus
-Ação
-Fernando Meirelles
-Paulo Lins
-02 Filmes
-Alexandre Rodrigues
-Alice Braga
-2002/08/30
-Brasil
-8.6
-
-
 INSERT INTO filme (titulo_original, titulo_em_portugues, genero, diretor, roteirista, produtora, ator, atriz, lancamento, pais, nota)
 VALUES ('The Fast and the Furious: Tokyo Drift', 'Velozes & Furiosos: Desafio em Tóquio', 'Ação', 'Justin Lin', 'Chris Morgan', 'Universal', 'Lucas Black', 'Amber Stevens West', '2006/08/11', 'EUA', 6.0),
 ('Cars', 'Carros', 'Animação', 'John Lasseter', 'Joe Ranft', 'Pixar', 'Owen Wilson', 'Jenifer Lewis', '2006/04/14', 'EUA', 7.2),
@@ -116,3 +55,4 @@ VALUES ('The Fast and the Furious: Tokyo Drift', 'Velozes & Furiosos: Desafio em
 ('Cidade de Deus', 'Cidade de Deus', 'Ação', 'Fernanda Meirelles', 'Paulo Lins', '02 Filmes', 'Alexandre Rodrigues', 'Alice Braga', '2002/08/30', 'Brasil', 8.6);
 
 FIM!
+
