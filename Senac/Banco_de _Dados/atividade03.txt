@@ -1,0 +1,31 @@
+CREATE TABLE livro (
+    id_livro INT NOT NULL AUTO_INCREMENT,
+    id_escritor DECIMAL,
+    id_editora DECIMAL,
+    nome VARCHAR(50) NOT NULL,
+    data_publicacao DATE,
+    genero VARCHAR(45),
+    PRIMARY KEY(id_livro)
+) DEFAULT CHARSET = utf8;
+
+CREATE TABLE escritor (
+    id_escritor INT NOT NULL AUTO_INCREMENT,
+    id_editora DECIMAL,
+    nome VARCHAR(50) NOT NULL,
+    data_publicacao DATE,
+    genero VARCHAR(45),
+    email VARCHAR(45),
+    telefone VARCHAR(45),
+    PRIMARY KEY(id_escritor)
+) DEFAULT CHARSET = utf8;
+
+CREATE TABLE editora (
+    id_editora INT NOT NULL AUTO_INCREMENT,
+    nome VARCHAR(50) NOT NULL,
+    data_fundacao DATE,
+    telefone VARCHAR(45),
+    email VARCHAR(45),
+    unmero_clientes VARCHAR(45),
+    PRIMARY KEY(id_editora)
+) DEFAULT CHARSET = utf8;
+
