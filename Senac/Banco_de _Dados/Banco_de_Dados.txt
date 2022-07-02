@@ -56,3 +56,20 @@ VALUES ('The Fast and the Furious: Tokyo Drift', 'Velozes & Furiosos: Desafio em
 
 FIM!
 
+CREATE TABLE IF NOT EXISTS videogames (
+    num INT NOT NULL AUTO_INCREMENT,
+    data_lancamento DATE NOT NULL,
+    codigo INT(6) NOT NULL,
+    nome VARCHAR(25) NOT NULL,
+    genero VARCHAR(25) NOT NULL,
+    indicacao_etaria INT(2) NOT NULL,
+    produtora VARCHAR(15) NOT NULL,
+    PRIMARY KEY(num)
+)DEFAULT CHARSET = utf8;
+
+INSERT INTO videogames VALUES
+(DEFAULT, '2015-04-14', 1, 'Grand Theft Auto V', 'Mundo Aberto', 18, 'RockStar'),
+(DEFAULT, '1980-05-22', 2, 'Pac Man', 'Eletrônico de Ação', 0, 'Namco'),
+(DEFAULT, '2016-03-02', 3, 'Clash Royale', 'Estratégia', 12, 'Supercell'),
+(DEFAULT, '2011-11-18', 4, 'Minecraft', 'Sobrevivência', 12, 'Mojang'),
+(DEFAULT, '2017-12-14', 5, 'Free Fire', 'Battle Royale', 10, '111dots');
