@@ -65,7 +65,7 @@ CREATE TABLE IF NOT EXISTS videogames (
     indicacao_etaria INT(2) NOT NULL,
     produtora VARCHAR(15) NOT NULL,
     PRIMARY KEY(num)
-)DEFAULT CHARSET = utf8;
+) DEFAULT CHARSET = utf8;
 
 INSERT INTO videogames VALUES
 (DEFAULT, '2015-04-14', 1, 'Grand Theft Auto V', 'Mundo Aberto', 18, 'RockStar'),
@@ -105,3 +105,41 @@ INSERT INTO produtos VALUES
 (DEFAULT, 'Café', 'pct', 1, 'Melita', 8.30, 120, '2023-05-23'),
 (DEFAULT, 'Feijão', 'pct', 1, 'Canil', 7.25, 150, '2022-06-23'),
 (DEFAULT, 'Leite em pó', 'pct', 1, 'Ninho', 13.66, 80, '2023-08-20');
+
+CREATE TABLE IF NOT EXISTS aluno (
+    id_aluno INT NOT NULL AUTO_INCREMENT,
+    matricula INT(4),
+    nome VARCHAR(50) NOT NULL,
+    PRIMARY KEY(id_aluno)
+) DEFAULT CHARSET = utf8;
+
+CREATE TABLE IF NOT EXISTS curso (
+    id_curso INT NOT NULL AUTO_INCREMENT,
+    nome VARCHAR(50) NOT NULL,
+    carga_horaria INT(4),
+    PRIMARY KEY(id_curso)
+) DEFAULT CHARSET = utf8;
+
+INSERT INTO curso VALUES
+(DEFAULT, 'Sistema de Bancos de Dados', 460),
+(DEFAULT, 'Robótica', 460),
+(DEFAULT, 'Fundamentos de Redes', 600),
+(DEFAULT, 'Microsoft Office 365 Avançado', 460),
+(DEFAULT, 'Linguagem de Programação Java', 1200),
+(DEFAULT, 'Linguagem de Programação Python', 600),
+(DEFAULT, 'Wordpress Básico ao Avançado', 360),
+(DEFAULT, 'Lógica de Programação', 260),
+(DEFAULT, 'Inteligência Artificial', 460);
+
+INSERT INTO aluno VALUES
+(DEFAULT, '1234', 'Keanu Reeves', '1'),
+(DEFAULT, '1234', 'Christina Ricci', '2'),
+(DEFAULT, '1234', 'Jessica Henwick', '1'),
+(DEFAULT, '1234', 'Carrier-Anne Moss', '3'),
+(DEFAULT, '1234', 'Yahya Abdul-Mateen II', '9'),
+(DEFAULT, '1234', 'Priyanka Chopra Jonas', '1'),
+(DEFAULT, '1234', 'Jada Pinkett Smith', '3'),
+(DEFAULT, '1234', 'Brian J. Smith', '1'),
+(DEFAULT, '1234', 'Neil Patrick Harris', '4'),
+(DEFAULT, '1234', 'Eréndira Ibarra', '9'),
+(DEFAULT, '1234', 'Ellen Hollman', '1');
