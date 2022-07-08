@@ -1,0 +1,34 @@
+CREATE DATABASE petshop
+DEFAULT CHARACTER SET utf8
+DEFAULT COLLATE utf8_general_ci;
+
+CREATE TABLE IF NOT EXISTS animal (
+    id INT NOT NULL AUTO_INCREMENT,
+    nome_animal VARCHAR(50) NOT NULL,
+    tipo_animal VARCHAR(20) NOT NULL,
+    raca VARCHAR(20) NOT NULL,
+    altura DECIMAL(3, 2) NOT NULL,
+    comprimento DECIMAL(3, 2) NOT NULL,
+    data_nascimento DATE,
+    PRIMARY KEY(id)
+) DEFAULT CHARSET = utf8;
+
+CREATE TABLE IF NOT EXISTS cliente (
+    id INT NOT NULL AUTO_INCREMENT,
+    nome_cliente VARCHAR(50) NOT NULL,
+    data_nascimento DATE
+    PRIMARY KEY(id)
+) DEFAULT CHARSET = utf8;
+
+CREATE TABLE IF NOT EXISTS telefone_cliente (
+    id INT NOT NULL AUTO_INCREMENT,
+    FOREIGN KEY(id) REFERENCES cliente
+)
+
+
+
+animal
+cliente
+telefone cliente
+estoque
+funcionario
