@@ -3,26 +3,84 @@ DEFAULT CHARACTER SET utf8
 DEFAULT COLLATE utf8_general_ci;
 
 CREATE TABLE IF NOT EXISTS animal (
-    id INT NOT NULL AUTO_INCREMENT,
+    id_animal INT NOT NULL AUTO_INCREMENT,
+    id_cliente INT NOT NULL,
     nome_animal VARCHAR(50) NOT NULL,
     tipo_animal VARCHAR(20) NOT NULL,
     raca VARCHAR(20) NOT NULL,
     altura DECIMAL(3, 2) NOT NULL,
     comprimento DECIMAL(3, 2) NOT NULL,
     data_nascimento DATE,
-    PRIMARY KEY(id)
+    PRIMARY KEY(id_animal),
+    FOREIGN KEY(id_cliente) REFERENCES cliente(id_cliente)
 ) DEFAULT CHARSET = utf8;
+
+INSERT INTO animal VALUES
+(DEFAULT, 'Rex', 'Cachorro', 'Rottweiler', 69, 100, 2022-07-01),
+(DEFAULT, 'Tracy', 'Gato', 'Chihuahua', 12, 24, 2020-05-11),
+(DEFAULT, 'Diana', 'Gato', 'Siamês', 15, 20, 2015-02-01),
+(DEFAULT, 'Lady', 'Cachorro', 'Pug', 30, 50, 2010-09-01),
+(DEFAULT, 'Raptor', 'Cachorro', 'Pastor Alemão', 50, 100, 2020-12-01),
+(DEFAULT, 'Garfield', 'Gato', 'Persa', 10, 25, 2021-03-01);
 
 CREATE TABLE IF NOT EXISTS cliente (
-    id INT NOT NULL AUTO_INCREMENT,
+    id_cliente INT NOT NULL AUTO_INCREMENT,
     nome_cliente VARCHAR(50) NOT NULL,
-    data_nascimento DATE
-    PRIMARY KEY(id)
+    data_nascimento DATE,
+    PRIMARY KEY(id_cliente)
 ) DEFAULT CHARSET = utf8;
 
+INSERT INTO cliente VALUES
+(DEFAULT, 'Reginaldo', '1987-03-27'),
+(DEFAULT, 'Sebastião', '1966-07-08'),
+(DEFAULT, 'Denison', '1970-05-17'),
+(DEFAULT, 'Silvia', '1993-12-31'),
+(DEFAULT, 'Camila', '1998-09-06'),
+(DEFAULT, 'Reginalda', '1997-11-12');
+
 CREATE TABLE IF NOT EXISTS telefone_cliente (
-    id INT NOT NULL AUTO_INCREMENT,
-    FOREIGN KEY(id) REFERENCES cliente
+    id_cliente INT NOT NULL,
+    id_animal INT NOT NULL,
+    telefone INT NOT NULL,
+    FOREIGN KEY(id_cliente) REFERENCES cliente(id_cliente),
+    FOREIGN KEY(id_animal) REFERENCES animal(id_animal)
+)
+
+INSERT INTO telefone_cliente VALUES
+(DEFAULT, '12345678'),
+(DEFAULT, '87654321'),
+(DEFAULT, '13579113'),
+(DEFAULT, '24680214'),
+(DEFAULT, '12356790'),
+(DEFAULT, '98754310');
+
+CREATE TABLE IF NOT EXISTS estoque (
+    id_produto INT NOT NULL AUTO_INCREMENT,
+    nome_produto VARCHAR(50),
+    quantidade INT,
+    tipo_produto VARCHAR(50),
+    PRIMARY KEY(id_produto)
+)
+
+INSERT INTO estoque VALUES
+(DEFAULT, 'Shampoo', 50, 'Cachorro'),
+(DEFAULT, 'Shampoo', 50, 'Cachorro'),
+(DEFAULT, 'Condicionador', 35, 'Gato'),
+(DEFAULT, 'Condionador', 50, 'Cachorro'),
+(DEFAULT, 'Shampoo', 35, 'Gato'),
+(DEFAULT, 'Sabão', 30, 'Ave');
+
+CREATE TABLE IF NOT EXISTS funcionario (
+    id_funcionario INT NOT NULL AUTO_INCREMENT,
+    nome_funcionario VARCHAR(50),
+    data_nascimento_funcionario DATE,
+    genero VARCHAR(10),
+    PRIMARY KEY(id_funcionario)
+)
+
+CREATE TABLE IF NOT EXISTS telefone (
+    id_cliente INT NOT NULL,
+    telefone INT NOT NULL
 )
 
 
