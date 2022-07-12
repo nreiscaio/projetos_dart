@@ -4,24 +4,24 @@ DEFAULT COLLATE utf8_general_ci;
 
 CREATE TABLE IF NOT EXISTS animal (
     id_animal INT NOT NULL AUTO_INCREMENT,
-    id_cliente INT NOT NULL,
     nome_animal VARCHAR(50) NOT NULL,
     tipo_animal VARCHAR(20) NOT NULL,
     raca VARCHAR(20) NOT NULL,
-    altura DECIMAL(3, 2) NOT NULL,
-    comprimento DECIMAL(3, 2) NOT NULL,
+    altura INT NOT NULL,
+    comprimento INT NOT NULL,
     data_nascimento DATE,
+    id_cliente INT NOT NULL,
     PRIMARY KEY(id_animal),
     FOREIGN KEY(id_cliente) REFERENCES cliente(id_cliente)
 ) DEFAULT CHARSET = utf8;
 
 INSERT INTO animal VALUES
-(DEFAULT, 'Rex', 'Cachorro', 'Rottweiler', 69, 100, 2022-07-01),
-(DEFAULT, 'Tracy', 'Gato', 'Chihuahua', 12, 24, 2020-05-11),
-(DEFAULT, 'Diana', 'Gato', 'Siamês', 15, 20, 2015-02-01),
-(DEFAULT, 'Lady', 'Cachorro', 'Pug', 30, 50, 2010-09-01),
-(DEFAULT, 'Raptor', 'Cachorro', 'Pastor Alemão', 50, 100, 2020-12-01),
-(DEFAULT, 'Garfield', 'Gato', 'Persa', 10, 25, 2021-03-01);
+(DEFAULT, 'Rex', 'Cachorro', 'Rottweiler', 0.69, 0.100, '2022-07-01', 1),
+(DEFAULT, 'Tracy', 'Gato', 'Chihuahua', 0.12, 0.24, '2020-05-11', 2),
+(DEFAULT, 'Diana', 'Gato', 'Siamês', 0.15, 0.20, '2015-02-01', 3),
+(DEFAULT, 'Lady', 'Cachorro', 'Pug', 0.30, 0.50, '2010-09-01', 4),
+(DEFAULT, 'Raptor', 'Cachorro', 'Pastor Alemão', 0.50, 0.100, '2020-12-01', 5),
+(DEFAULT, 'Garfield', 'Gato', 'Persa', 0.10, 0.25, '2021-03-01', 6);
 
 CREATE TABLE IF NOT EXISTS cliente (
     id_cliente INT NOT NULL AUTO_INCREMENT,
@@ -39,20 +39,20 @@ INSERT INTO cliente VALUES
 (DEFAULT, 'Reginalda', '1997-11-12');
 
 CREATE TABLE IF NOT EXISTS telefone_cliente (
+    telefone INT NOT NULL,
     id_cliente INT NOT NULL,
     id_animal INT NOT NULL,
-    telefone INT NOT NULL,
     FOREIGN KEY(id_cliente) REFERENCES cliente(id_cliente),
     FOREIGN KEY(id_animal) REFERENCES animal(id_animal)
 )
 
 INSERT INTO telefone_cliente VALUES
-(DEFAULT, '12345678'),
-(DEFAULT, '87654321'),
-(DEFAULT, '13579113'),
-(DEFAULT, '24680214'),
-(DEFAULT, '12356790'),
-(DEFAULT, '98754310');
+('12345678', 1, 14),
+('87654321', 2, 15),
+('13579113', 3, 16),
+('24680214', 4, 17),
+('12356790', 5, 18),
+('98754310', 6, 19);
 
 CREATE TABLE IF NOT EXISTS estoque (
     id_produto INT NOT NULL AUTO_INCREMENT,
@@ -90,3 +90,18 @@ cliente
 telefone cliente
 estoque
 funcionario
+
+ALTER TABLE telefone ADD COLUMN CEP VARCHAR(20);
+ALTER TABLE telefone DROP COLUMN CEP;
+
+SELECT animal.nome_animal, cliente.nome_cliente
+FROM animal INNER JOIN cliente ON
+cliente.id_cliente = animal.id_animal;
+
+Atomicidade: Em uma transação envolvendo duas ou mais partes de informações discretas, ou a transação será executada totalmente ou não será executada, garantindo assim que as transações sejam atômicas.
+
+Consistência: A transação cria um novo estado válido dos dados ou em caso de falha retorna todos os dados ao seu estado antes que a transação foi iniciada.
+
+Isolamento: Uma transação em andamento mas ainda não validada deve permanecer isolada de qualquer outra operação, ou seja, garantimos que a transação não será interferida por nenhuma outra transação concorrente.
+
+Durabilidade: Dados validados são registados pelo sistema de tal forma que mesmo no caso de uma falha e/ou reinício do sistema, os dados estão disponíveis em seu estado correto.
