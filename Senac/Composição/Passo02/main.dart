@@ -19,5 +19,3 @@ void main() {
   print('Disciplina do Aluno: ${aluno1.disciplina.nomeDisciplina}');
   aluno1.notaAluno.forEach((key, value) => print('Nota: ${value}'));
 }
-
-
